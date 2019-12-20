@@ -8,10 +8,9 @@ k = gets.to_i
 answer = "Yay!"
 array = [a,b,c,d,e]
 
-(0..3).each do |number|
-  if (array[number] - array[number + 1]) > k
+array.combination(2) do |first, second|
+  if second - first > k
     answer = ":("
-    break
   end
 end
 
