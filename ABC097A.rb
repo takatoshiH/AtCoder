@@ -1,6 +1,8 @@
 a,b,c,d = gets.chomp.split(" ").map(&:to_i)
-array = [a,b,c].sort!
-array.each_index do |idx|
-  
+answer = "No"
+
+if (a - c).abs <= d || ((a - b).abs <= d && (b - c).abs <= d)
+  answer = "Yes"
 end
 
+puts answer
