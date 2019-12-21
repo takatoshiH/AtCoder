@@ -1,8 +1,8 @@
 a, b = gets.chomp.split(" ").map(&:to_i)
+answer = "Odd"
 
-if a * b % 2 == 0
-  puts "Even"
-else
-  puts "Odd"
-end
+answer = "Even" if a % 2 == 0 || b % 2 == 0
+
+puts answer
+
 
