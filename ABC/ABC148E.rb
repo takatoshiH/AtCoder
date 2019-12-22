@@ -7,22 +7,18 @@ else
     puts 0
   else
     limit = 5
-array = []
+    array = []
 
-while n / limit >= 1
-  array.push(limit * 2)
-  limit *= 5
-end
-limit /= 5
+    while n / limit >= 1
+      array.push(limit * 2)
+      limit *= 5
+    end
+    
+    sum = 0
+    array.each do |number|
+      sum += n / number
+    end
 
-sum = 0
-
-array.each do |number|
-  sum += n / number
-end
-
-puts sum
-
+    puts sum
   end
-
 end
