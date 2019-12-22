@@ -1,5 +1,8 @@
 array = gets.chomp.split(" ").map(&:to_i)
+sum = []
 
-array.delete(array.max)
+array.combination(2) do |first, second|
+  sum.push(first + second)
+end
 
-puts array.sum
+puts sum.min
