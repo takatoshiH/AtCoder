@@ -1,5 +1,4 @@
-x,y = gets.chomp.split(" ").map(&:to_f)
+a,b = gets.chomp.split(" ").map(&:to_i)
 
-y % x == 0 ? answer = y / x : answer = (y / x) + 1
-
+b % a == 0 ? answer = b / a : answer = b / a + 1
 puts answer

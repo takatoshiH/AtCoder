@@ -5,6 +5,9 @@ array = []
   array.push(number + l - 1)
 end
 
-array.delete_at(array.min)
-
+min_abs = array.first.abs
+array.each do |number|
+  abs = number if number.abs <= min_abs
+end
+array.delete(abs)
 puts array.sum
