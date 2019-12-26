@@ -1,14 +1,12 @@
 a = gets.to_i
 b = gets.to_i
 n = gets.to_i
-p a
-p b
-p n
 
 answer = a.lcm(b)
+local_answer = answer
 
-while n > answer 
-  answer *= 2
+while n > local_answer 
+  local_answer += answer
 end
 
-puts answer
+puts local_answer

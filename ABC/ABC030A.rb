@@ -1,4 +1,4 @@
-a,b,c,d = gets.chomp.split(" ").map(&:to_i)
+a,b,c,d = gets.chomp.split(" ").map(&:to_f)
 
 if b / a > d / c
   answer = "TAKAHASHI"
