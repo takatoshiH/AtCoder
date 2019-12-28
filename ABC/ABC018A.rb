@@ -1,5 +1,17 @@
-a = gets.to_i
-b = gets.to_i
-c = gets.to_i
+array = []
+(1..3).each do
+  array.push(gets.to_i)
+end
 
-array = [[a,1], [b,2] c]
+max = array.max
+min = array.min
+
+array.each do |number|
+  if number == max
+    puts 1
+  elsif number == min
+    puts 3
+  else
+    puts 2
+  end
+end
