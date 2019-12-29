@@ -3,7 +3,7 @@
  c = gets.chomp.split(" ")
  d = gets.chomp.split(" ")
 
- puts d.join 
- puts c.join
- puts b.join
- puts a.join
+ puts d.reverse.join(" ")
+ puts c.reverse.join(" ")
+ puts b.reverse.join(" ")
+ puts a.reverse.join(" ")
