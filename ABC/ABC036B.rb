@@ -1,15 +1,19 @@
 n = gets.to_i
 array = []
-new_array = []
+new_array = Array.new(n).map{Array.new()}
 
-(1..n).each do
+(0...n).each do |number|
   array.push(gets.chomp.split(""))
 end
 
-p array
+array.reverse!
 
-(0...n).reach do |idx|
-  new_array.push(array[idx].first)
+(0..n-1).each do |number|
+  (0..n-1).each do |in_number|
+    new_array[in_number].push(array[number][in_number])
+  end
 end
 
-puts new_array.join
+new_array.each do |number|
+  puts number.join
+end
