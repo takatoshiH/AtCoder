@@ -1,4 +1,8 @@
+n = gets.to_i
 
-p 1.methods.count
+array = []
+(1..n).each do 
+  array.push(gets.chomp.split(""))
+end
 
-p (*1..100).class
+p array
