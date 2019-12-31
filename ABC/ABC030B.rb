@@ -3,5 +3,5 @@ n = n % 12
 hour = 30
 
 answer = (n * hour - m * 5.5).abs
-answer = answer - 180 if answer > 180
+answer = 360 - answer if answer >= 180
 puts answer
