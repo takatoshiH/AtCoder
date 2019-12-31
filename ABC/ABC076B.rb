@@ -1,10 +1,9 @@
 n = gets.to_i
 k = gets.to_i
-answer = [1]
+answer = 1
 
-(1..n).each do 
-  answer.each_with_index do |number, idx|
-    answer[idx](number * 2)
-    answer[idx](number + k)
-  end
+(1..n).each do |number|
+  answer * 2 >= answer + k ? answer += k : answer *= 2
 end
+
+puts answer
