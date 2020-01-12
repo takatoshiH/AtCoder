@@ -2,12 +2,20 @@ n, l = gets.chomp.split(" ").map(&:to_i)
 array = []
 
 (1..n).each do |number|
-  array.push(number + l - 1)
+  array.push((l + number - 1))
 end
 
-min_abs = array.first.abs
-array.each do |number|
-  abs = number if number.abs <= min_abs
+new_array = []
+min = array.first.abs
+index = 0
+
+array.each_with_index do |number,idx|
+  if min >= number.abs
+    index = idx
+    min = number.abs
+  end
 end
-array.delete(abs)
-puts array.sum
+
+puts array.inject(:+) - array[index]
+
+
