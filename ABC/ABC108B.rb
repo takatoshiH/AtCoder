@@ -1,24 +1,11 @@
-array = gets.chomp.split(" ").map(&:to_i)
-first = []
-second = []
-third = [0,0]
-forth = [0,0]
+x_1, y_1, x_2, y_2 = gets.chomp.split(" ").map(&:to_i)
 
-first.push(array[0])
-first.push(array[2])
-second.push(array[1])
-second.push(array[3])
+dx = x_2 - x_1
+dy = y_2 - y_1
 
-third = [0,0]
-forth = [0,0]
+x_3 = x_2 - dy
+y_3 = y_2 + dx
+x_4 = x_1 - dy
+y_4 = y_1 + dx
 
-dx = second[0] - first[0]
-dy = second[0] - first[0]
-
-third[1] = second[1] - dx
-forth[1] = first[1] - dx
-
-third[0] = second[0] + dy
-forth[0] = first[0] + dy
-
-puts third.concat(forth).join(" ")
+puts x_3.to_s + " " + y_3.to_s + " " + x_4.to_s + " " + y_4.to_s
