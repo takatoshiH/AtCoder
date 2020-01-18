@@ -1,26 +1,31 @@
-t = gets.chomp.split("")
+string = gets.chomp.split("")
 answer = "AC"
 
-unless t.first != "A"
-  answer = "WA"
-end
+if string.first == "A" && string.slice(1) == string.slice(1).downcase
+  string = string.slice(2...string.length)
+  cnt = 0
+  idx = []
 
-t.delete_at(0)
+  string.each_with_index do |s, index|
+    if s == "C" && index != string.length-1
+      cnt += 1
+      idx.push(index)
+    end
+  end
+  
+  if cnt == 1 && !idx.empty?
+    string.delete_at(idx.first)
+    new_string = []
 
-(1...t.length - 1).each do |number|
-  if t[number] == "C"
-    t.delete_at(number)
-    break
+    string.each_with_index do |s, index|
+      new_string.push(s.downcase)
+    end
+    answer = "WA" unless string == new_string
   else
     answer = "WA"
   end
-end
-
-t.each do |string|
- unless 97 <= string.ord && string.ord <= 122
+else
   answer = "WA"
-  break
- end
 end
 
 puts answer
