@@ -1,8 +1,2 @@
-n = gets.to_i
-
-array = []
-(1..n).each do 
-  array.push(gets.chomp.split(""))
-end
-
+array = gets.chomp.split(" ").map { |number| number.to_i }
 p array

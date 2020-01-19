@@ -3,7 +3,7 @@ array = [s]
 
 (1...k).each do
   if array.last.even?
-    last = array.last 
+    last = array.last
     array.push(last / 2)
     array.push(last / 2)
   else
