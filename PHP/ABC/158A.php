@@ -1,4 +1,5 @@
 <?php
+// 標準入力
     fscanf(STDIN,"%s", $string);
 
     if($string[0] === $string[1] && $string[1] === $string[2]) {
