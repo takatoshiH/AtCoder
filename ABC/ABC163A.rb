@@ -1,0 +1,1 @@
+puts 3.14 * gets.chomp.to_i * 2
